@@ -1,51 +1,90 @@
+:root {
+    --borderRadius: 7px;
+}
+
 body {
-    font: 14px "Century Gothic", Futura, sans-serif;
-    margin: 20px;
-  }
-  
-  ol, ul {
-    padding-left: 30px;
-  }
-  
-  .board-row:after {
-    clear: both;
-    content: "";
-    display: table;
-  }
-  
-  .status {
-    margin-bottom: 10px;
-  }
-  
-  .square {
+	font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	margin: 0;
+    font-weight: 400;
+}
+
+body, #root {
+    min-height: 100vh;
+}
+
+ol,
+ul {
+	padding-left: 30px;
+}
+
+.first-row button:first-child {
+    border-top-left-radius: var(--borderRadius);
+}
+
+.first-row button:last-child {
+    border-top-right-radius: var(--borderRadius);
+}
+
+.last-row button:first-child {
+    border-bottom-left-radius: var(--borderRadius);
+}
+
+.last-row button:last-child {
+    border-bottom-right-radius: var(--borderRadius);
+}
+
+.board-row:after {
+	clear: both;
+	content: "";
+	display: table;
+}
+
+.status {
+	margin-bottom: 10px;
+}
+
+.square {
     background: #fff;
     border: 1px solid #999;
     float: left;
-    font-size: 24px;
+    font-size: 40px;
     font-weight: bold;
-    line-height: 34px;
-    height: 34px;
+    line-height: 60px;
+    height: 60px;
     margin-right: -1px;
     margin-top: -1px;
     padding: 0;
     text-align: center;
-    width: 34px;
-  }
-  
-  .square:focus {
-    outline: none;
-  }
-  
-  .kbd-navigation .square:focus {
-    background: #ddd;
-  }
-  
-  .game {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .game-info {
-    margin-left: 20px;
-  }
-  
+    width: 57px;
+}
+
+.square:focus {
+	outline: none;
+}
+
+.kbd-navigation .square:focus {
+	background: #ddd;
+}
+
+.game {
+	display: flex;
+	flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.game-info {
+	margin-left: 20px;
+    font-size: 24px;
+}
+
+.game-info button {
+    padding: 0.3em 0.6em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    color: #fff;
+    background-color: #0070f3;
+    font-size: 19px;
+}

@@ -23,7 +23,7 @@ class Board extends React.Component {
 	render() {
 		return (
 			<div>
-				<div className="board-row">
+				<div className="board-row first-row">
 					{this.renderSquare(0)}
 					{this.renderSquare(1)}
 					{this.renderSquare(2)}
@@ -33,7 +33,7 @@ class Board extends React.Component {
 					{this.renderSquare(4)}
 					{this.renderSquare(5)}
 				</div>
-				<div className="board-row">
+				<div className="board-row last-row">
 					{this.renderSquare(6)}
 					{this.renderSquare(7)}
 					{this.renderSquare(8)}
